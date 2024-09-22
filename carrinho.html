@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Minha Loja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Carrinho de Compras</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="carrinho.html">Carrinho</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <section class="cart-summary">
+        <h2>Resumo do Carrinho</h2>
+        <div id="carrinho"></div>
+        <p>Total: R$ <span id="total"></span></p>
+        <a href="checkout.html" class="button">Finalizar Compra</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function carregarCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            let lista = '';
+            let total = 0;
+
+            carrinho.forEach(item => {
+                lista += `<p>${item.produto} - R$${item.preco}</p>`;
+                total += item.preco;
+            });
+
+            document.getElementById('carrinho').innerHTML = lista;
+            document.getElementById('total').innerText = total.toFixed(2);
+        }
+
+        carregarCarrinho();
+    </script>
+</body>
+</html>

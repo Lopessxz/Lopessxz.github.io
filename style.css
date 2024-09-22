@@ -1,0 +1,273 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banner .button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.banner .button:hover {
+    background-color: #fff100;
+    color: #000;
+}
+
+/* Seção de descrição */
+.about {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #1a73e8;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* Seção de produtos */
+.product-list {
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.product-list h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #1a73e8;
+}
+
+.product {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.product button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #1558c0;
+}
+
+/* Carrinho de compras */
+.cart-summary {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cart-summary h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #1a73e8;
+}
+
+.cart-summary p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.cart-summary .button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.cart-summary .button:hover {
+    background-color: #fff100;
+    color: #000;
+}
+
+/* Formulário de Checkout */
+.checkout-form {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.checkout-form h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #1a73e8;
+}
+
+.checkout-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.checkout-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.checkout-form button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-form button:hover {
+    background-color: #1558c0;
+}
+
+/* Footer (Rodapé) */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p, footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .product {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
